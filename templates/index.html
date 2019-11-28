@@ -1,0 +1,62 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script>
+        function copy()
+        {
+            document.getElementById('final').value=document.getElementById('input').value;
+        }
+        document.addEventListener('input', function (event) {
+                copy();
+                if (event.target.id === 'font')
+                {
+                    document.getElementById('final').style.fontFamily=event.target.value;
+                }
+                else if(event.target.id==='size')
+                {
+                    document.getElementById('final').style.fontSize = event.target.value;
+                }
+
+            }, false);
+    </script>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1>Caring Works Assignment</h1>
+        <p>Showcasing skills with this App! Be sure to check my JavaScript OS</p>
+    </div>
+<div id="content" >
+    <div id="left" style="padding:20px;width: 50%; float:left">
+        <div class="form-group">
+            <label for="input">Your Input:</label>
+            <textarea class="form-control" rows="5" id="input" style="height: 250px;"></textarea>
+        </div>
+    </div>
+    <div id="right" style="padding:20px;width: 50%; float:right">
+        <div class="form-group">
+            <label for="final">Final:</label>
+            <textarea class="form-control" rows="5" id="final" style="height: 250px;" readonly></textarea>
+        </div>
+    </div>
+</div>
+<div style="padding: 30px;">
+    <div class="form-group" >
+        <label for="font">Font Style:</label>
+        <select class="form-control" id="font">
+            <option value="Impact, Charcoal, sans-serif" style="font-family: Impact, Charcoal, sans-serif;">Impact</option>
+            <option value='"Arial Black", Gadget, sans-serif' style='font-family: "Arial Black", Gadget, sans-serif'>Arial Black</option>
+        </select>
+    </div>
+
+    <div class="form-group" >
+        <label for="size">Font Size:</label>
+        <select class="form-control" id="size">
+            <option value="20px" style="font-size:20px">20px</option>
+            <option value='40px' style='font-size:40px'>40px</option>
+        </select>
+    </div>
+</div>
+</div>
+</body>
